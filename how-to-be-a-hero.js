@@ -168,12 +168,12 @@ Hooks.once("init", async function() {
     // Register custom sheet applications
     Actors.unregisterSheet("core", ActorSheet);
     Actors.registerSheet("how-to-be-a-hero", HowToBeAHeroActorSheet, {
-        types: ["hero"], // Only register for 'hero' type for now
+        types: ["Player"], // Only register for 'hero' type for now
         makeDefault: true
     });
     // You can register other actor types later if they need different sheets
     Actors.registerSheet("how-to-be-a-hero", ActorSheet, {
-        types: ["npc", "threat"],
+        types: ["Npc", "Enemy"],
         makeDefault: false // Don't make default for these unless you create specific sheets
     });
 

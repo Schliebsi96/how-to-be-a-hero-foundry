@@ -1,15 +1,15 @@
 {
   "Actor": {
-    "types": ["hero", "npc", "threat"],
-    "hero": {
+    "types": ["Player", "Npc", "Enemy"],
+    "Player": {
       "templates": ["commonActorFields", "heroFields"],
       "skills": {}
     },
-    "npc": {
+    "Npc": {
       "templates": ["commonActorFields"],
       "attributes": {}
     },
-    "threat": {
+    "Enemy": {
       "templates": ["commonActorFields"],
       "threatDetails": {}
     }

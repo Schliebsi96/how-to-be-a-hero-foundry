@@ -1,0 +1,27 @@
+<!-- templates/item/item-equipment-sheet.html -->
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <div class="header-details flexrow">
+            <h1 class="item-name">
+                <input name="name" type="text" value="{{item.name}}" placeholder="Equipment Name" />
+            </h1>
+            <div class="item-subtitle">Equipment</div>
+        </div>
+    </header>
+
+    <section class="sheet-body">
+        <div class="form-group">
+            <label>{{localize "HOWTOBEAHERO.EquipmentRollModifier"}}</label>
+            <input type="number" name="system.rollModifier" value="{{system.rollModifier}}" data-dtype="Number" />
+        </div>
+        <div class="form-group">
+            <label>{{localize "HOWTOBEAHERO.EquipmentDamage"}}</label>
+            <input type="text" name="system.damage" value="{{system.damage}}" placeholder="e.g., 7d10" />
+        </div>
+        <div class="form-group editor-label">
+            <label>{{localize "HOWTOBEAHERO.EquipmentDescription"}}</label>
+            {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+        </div>
+    </section>
+</form>

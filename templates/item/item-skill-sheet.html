@@ -1,0 +1,38 @@
+<!-- templates/item/item-skill-sheet.html -->
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <div class="header-details flexrow">
+            <h1 class="item-name">
+                <input name="name" type="text" value="{{item.name}}" placeholder="Skill Name" />
+            </h1>
+            <div class="item-subtitle">Skill</div>
+        </div>
+    </header>
+
+    <section class="sheet-body">
+        <div class="form-group">
+            <label>{{localize "HOWTOBEAHERO.SkillBaseValue"}}</label>
+            <input type="number" name="system.baseValue" value="{{system.baseValue}}" data-dtype="Number" />
+        </div>
+        <div class="form-group">
+            <label>{{localize "HOWTOBEAHERO.SkillCategory"}}</label>
+            <select name="system.category" data-dtype="String">
+                {{#select system.category}}
+                <option value="Handeln">Handeln</option>
+                <option value="Wissen">Wissen</option>
+                <option value="Soziales">Soziales</option>
+                <option value="Other">Other</option>
+                {{/select}}
+            </select>
+        </div>
+        <div class="form-group">
+            <label>{{localize "HOWTOBEAHERO.SkillCategoryModifier"}}</label>
+            <input type="number" name="system.categoryModifier" value="{{system.categoryModifier}}" data-dtype="Number" readonly />
+        </div>
+        <div class="form-group">
+            <label>{{localize "HOWTOBEAHERO.SkillTotalValue"}}</label>
+            <input type="number" name="system.totalValue" value="{{system.totalValue}}" data-dtype="Number" readonly />
+        </div>
+    </section>
+</form>

@@ -1,0 +1,38 @@
+{
+  "HOWTOBEAHERO.SystemTitle": "How to Be a Hero",
+  "HOWTOBEAHERO.SystemDescription": "Ein benutzerdefiniertes System für das 'How to Be a Hero' Tabletop-Rollenspiel.",
+  "HOWTOBEAHERO.ActorTypeHero": "Held",
+  "HOWTOBEAHERO.ActorTypeNPC": "NSC",
+  "HOWTOBEAHERO.ActorTypeThreat": "Bedrohung",
+  "HOWTOBEAHERO.ItemTypeSkill": "Fertigkeit",
+  "HOWTOBEAHERO.ItemTypeEquipment": "Ausrüstung",
+  "HOWTOBEAHERO.ItemTypeTrait": "Merkmal",
+
+  "HOWTOBEAHERO.Gender": "Geschlecht",
+  "HOWTOBEAHERO.Stature": "Statur",
+  "HOWTOBEAHERO.Occupation": "Beruf",
+  "HOWTOBEAHERO.Age": "Alter",
+  "HOWTOBEAHERO.Religion": "Religion",
+  "HOWTOBEAHERO.MaritalStatus": "Familienstand",
+  "HOWTOBEAHERO.PortraitScore": "Portrait",
+  "HOWTOBEAHERO.LifePoints": "Lebenspunkte",
+  "HOWTOBEAHERO.LifePointsMax": "Max. Lebenspunkte",
+  "HOWTOBEAHERO.Inventory": "Inventar",
+  "HOWTOBEAHERO.Notes": "Anmerkungen",
+  "HOWTOBEAHERO.SkillPointsTotal": "Gesamtpunkte",
+  "HOWTOBEAHERO.SkillPointsRemaining": "Übrige Punkte",
+
+  "HOWTOBEAHERO.SkillBaseValue": "Basiswert",
+  "HOWTOBEAHERO.SkillCategory": "Kategorie",
+  "HOWTOBEAHERO.SkillCategoryModifier": "Kategorien-Modifikator",
+  "HOWTOBEAHERO.SkillTotalValue": "Gesamtwert",
+  "HOWTOBEAHERO.EquipmentDescription": "Beschreibung",
+  "HOWTOBEAHERO.EquipmentRollModifier": "Wurf-Modifikator",
+  "HOWTOBEAHERO.EquipmentDamage": "Schaden",
+  "HOWTOBEAHERO.TraitDescription": "Beschreibung",
+  "HOWTOBEAHERO.TraitEffect": "Effekt",
+
+  "HOWTOBEAHERO.SkillsTab": "Fertigkeiten",
+  "HOWTOBEAHERO.InventoryTab": "Inventar & Merkmale",
+  "HOWTOBEAHERO.DescriptionTab": "Beschreibung"
+}

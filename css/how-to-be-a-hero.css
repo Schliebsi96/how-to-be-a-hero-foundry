@@ -1,0 +1,471 @@
+/* This is the main CSS file for your 'How to Be a Hero' system. */
+/* All system-specific styling will go here. */
+
+/* Basic sheet styling */
+.how-to-be-a-hero.sheet {
+    font-family: "Inter", sans-serif;
+    background-color: #f0f0f0;
+}
+
+.how-to-be-a-hero .window-content {
+    padding: 10px;
+    background-color: #fdfdfd; /* Light background for content */
+}
+
+/* Header Styling */
+.how-to-be-a-hero .sheet-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.how-to-be-a-hero .sheet-header .profile-img {
+    flex: 0 0 100px;
+    height: 100px;
+    border: 2px solid #555;
+    border-radius: 8px;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.how-to-be-a-hero .sheet-header .header-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.how-to-be-a-hero .sheet-header .charname input {
+    font-size: 2em;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #aaa;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.how-to-be-a-hero .header-fields {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.how-to-be-a-hero .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.how-to-be-a-hero .form-group label {
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 2px;
+    color: #444;
+}
+
+.how-to-be-a-hero .form-group input[type="text"],
+.how-to-be-a-hero .form-group input[type="number"],
+.how-to-be-a-hero .form-group select {
+    padding: 3px 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 0.95em;
+}
+
+.how-to-be-a-hero .form-group.flex-group {
+    flex-direction: row;
+    align-items: center;
+}
+
+.how-to-be-a-hero .form-group.flex-group input {
+    width: 50px;
+    text-align: center;
+}
+
+.how-to-be-a-hero .form-group.flex-group .sep {
+    margin: 0 5px;
+}
+
+.how-to-be-a-hero .form-group .label-tiny {
+    font-size: 0.75em;
+    color: #666;
+    margin-left: 5px;
+    align-self: flex-end;
+}
+
+/* Tabs */
+.how-to-be-a-hero .sheet-tabs {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.how-to-be-a-hero .sheet-tabs .item {
+    font-size: 1.1em;
+    padding: 5px 15px;
+    color: #555;
+    border-bottom: none;
+}
+
+.how-to-be-a-hero .sheet-tabs .item.active {
+    color: #000;
+    border-bottom: 2px solid #555;
+}
+
+/* Sheet Body */
+.how-to-be-a-hero .sheet-body {
+    overflow-y: auto;
+    padding: 0 5px;
+}
+
+.how-to-be-a-hero .tab {
+    padding: 10px 0;
+}
+
+/* Skills Tab */
+.how-to-be-a-hero .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.how-to-be-a-hero .skill-category-block {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.how-to-be-a-hero .skill-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.how-to-be-a-hero .skill-category-header h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.how-to-be-a-hero .skill-values-header {
+    display: flex;
+    gap: 10px;
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #777;
+    text-align: center;
+}
+.how-to-be-a-hero .skill-values-header span {
+    flex: 1;
+    width: 35px; /* Fixed width for value columns */
+}
+
+.how-to-be-a-hero .skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.how-to-be-a-hero .skill-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+.how-to-be-a-hero .skill-item:last-child {
+    border-bottom: none;
+}
+
+.how-to-be-a-hero .skill-item .item-name {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.how-to-be-a-hero .skill-item .item-img {
+    flex: 0 0 24px;
+    height: 24px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+.how-to-be-a-hero .skill-item h4 {
+    margin: 0;
+    font-size: 1em;
+    font-weight: normal;
+    color: #333;
+}
+
+.how-to-be-a-hero .skill-base-value,
+.how-to-be-a-hero .skill-modifier,
+.how-to-be-a-hero .skill-total-value {
+    flex: 0 0 40px; /* Fixed width for skill value columns */
+    text-align: center;
+    padding: 0 2px;
+}
+
+.how-to-be-a-hero .skill-base-value input {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.how-to-be-a-hero .skill-modifier span,
+.how-to-be-a-hero .skill-total-value span {
+    display: block;
+    padding: 2px;
+}
+
+.how-to-be-a-hero .item-controls {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 5px;
+}
+
+.how-to-be-a-hero .item-control {
+    color: #777;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+.how-to-be-a-hero .item-control:hover {
+    color: #333;
+}
+
+.how-to-be-a-hero .item-create {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    color: #555;
+}
+.how-to-be-a-hero .item-create:hover {
+    background-color: #d0d0d0;
+}
+
+/* Inventory & Traits Tab */
+.how-to-be-a-hero .inventory-section,
+.how-to-be-a-hero .traits-section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.how-to-be-a-hero .inventory-section h2,
+.how-to-be-a-hero .traits-section h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3em;
+    margin-top: 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.how-to-be-a-hero .item-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.how-to-be-a-hero .item-list .item {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+.how-to-be-a-hero .item-list .item:last-child {
+    border-bottom: none;
+}
+
+.how-to-be-a-hero .item-list .item-name {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.how-to-be-a-hero .item-list .item-img {
+    flex: 0 0 24px;
+    height: 24px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+.how-to-be-a-hero .item-list h4 {
+    margin: 0;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.how-to-be-a-hero .inventory-header,
+.how-to-be-a-hero .traits-header {
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 5px;
+}
+.how-to-be-a-hero .inventory-header .item-name,
+.how-to-be-a-hero .traits-header .item-name {
+    flex: 1;
+}
+.how-to-be-a-hero .inventory-header .item-controls,
+.how-to-be-a-hero .traits-header .item-controls {
+    flex: 0 0 60px; /* Adjust as needed */
+    text-align: right;
+}
+
+/* Description Tab */
+.how-to-be-a-hero .editor-label {
+    margin-bottom: 15px;
+}
+.how-to-be-a-hero .editor-label label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.how-to-be-a-hero .editor-container {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden; /* Contains the tinyMCE editor */
+}
+/* Ensure editor content is readable */
+.how-to-be-a-hero .editor-content {
+    min-height: 150px; /* Ensure sufficient height for editor */
+    padding: 5px;
+    background-color: #fff;
+}
+
+
+/* General Flexbox Utilities (Common in Foundry) */
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flexcol {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-3col {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* Chat Card Styling */
+.how-to-be-a-hero-roll-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.how-to-be-a-hero-roll-card .roll-header {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.how-to-be-a-hero-roll-card .roll-result {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.how-to-be-a-hero-roll-card .roll-label,
+.how-to-be-a-hero-roll-card .target-label,
+.how-to-be-a-hero-roll-card .damage-label {
+    font-weight: bold;
+    color: #555;
+    margin-right: 5px;
+}
+
+.how-to-be-a-hero-roll-card .roll-value,
+.how-to-be-a-hero-roll-card .target-value,
+.how-to-be-a-hero-roll-card .damage-value {
+    color: #000;
+    font-weight: bold;
+}
+
+.how-to-be-a-hero-roll-card .roll-outcome {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.how-to-be-a-hero-roll-card .roll-outcome.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.how-to-be-a-hero-roll-card .roll-outcome.failure {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.how-to-be-a-hero-roll-card .damage-result {
+    margin-top: 10px;
+    padding-top: 5px;
+    border-top: 1px dashed #eee;
+    font-size: 1.1em;
+}
+
+.how-to-be-a-hero-roll-card .damage-formula {
+    font-size: 0.9em;
+    color: #777;
+    margin-left: 5px;
+}
+
+/* TinyMCE specific adjustments to match Foundry's default */
+.how-to-be-a-hero .tox .tox-editor-container {
+    border: none;
+}
+.how-to-be-a-hero .tox .tox-toolbar-overlord {
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+}
+.how-to-be-a-hero .tox .tox-menubar,
+.how-to-be-a-hero .tox .tox-toolbar {
+    background-color: #e0e0e0;
+}
+.how-to-be-a-hero .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type) {
+    border-right: 1px solid #ccc;
+}
+.how-to-be-a-hero .tox .tox-tgrp {
+    background-color: #f0f0f0; /* Match sheet background */
+}
