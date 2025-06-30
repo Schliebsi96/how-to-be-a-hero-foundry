@@ -1,0 +1,197 @@
+{
+  "Actor": {
+    "types": ["hero", "npc", "threat"],
+    "hero": {
+      "templates": ["commonActorFields", "heroFields"],
+      "skills": {}
+    },
+    "npc": {
+      "templates": ["commonActorFields"],
+      "attributes": {}
+    },
+    "threat": {
+      "templates": ["commonActorFields"],
+      "threatDetails": {}
+    }
+  },
+  "Item": {
+    "types": ["skill", "equipment", "trait"],
+    "skill": {
+      "templates": ["commonItemFields"],
+      "skillType": "string",
+      "baseValue": {
+        "type": "Number",
+        "label": "HOWTOBEAHERO.SkillBaseValue",
+        "value": 0
+      },
+      "category": {
+        "type": "String",
+        "label": "HOWTOBEAHERO.SkillCategory",
+        "options": ["Handeln", "Wissen", "Soziales", "Other"],
+        "value": "Other"
+      },
+      "categoryModifier": {
+        "type": "Number",
+        "label": "HOWTOBEAHERO.SkillCategoryModifier",
+        "value": 0
+      },
+      "totalValue": {
+        "type": "Number",
+        "label": "HOWTOBEAHERO.SkillTotalValue",
+        "value": 0
+      }
+    },
+    "equipment": {
+      "templates": ["commonItemFields"],
+      "description": {
+        "type": "String",
+        "label": "HOWTOBEAHERO.EquipmentDescription",
+        "editor": true
+      },
+      "rollModifier": {
+        "type": "Number",
+        "label": "HOWTOBEAHERO.EquipmentRollModifier",
+        "value": 0
+      },
+      "damage": {
+        "type": "String",
+        "label": "HOWTOBEAHERO.EquipmentDamage",
+        "value": ""
+      }
+    },
+    "trait": {
+      "templates": ["commonItemFields"],
+      "description": {
+        "type": "String",
+        "label": "HOWTOBEAHERO.TraitDescription",
+        "editor": true
+      },
+      "effect": {
+        "type": "String",
+        "label": "HOWTOBEAHERO.TraitEffect",
+        "editor": true
+      }
+    }
+  },
+  "JournalEntry": {
+    "templates": []
+  },
+  "Scene": {
+    "templates": []
+  },
+  "Tile": {
+    "templates": []
+  },
+  "Card": {
+    "templates": []
+  },
+  "Cards": {
+    "templates": []
+  },
+  "Combat": {
+    "templates": []
+  },
+  "Macro": {
+    "templates": []
+  },
+  "Playlist": {
+    "templates": []
+  },
+  "RollTable": {
+    "templates": []
+  },
+  "tables": {
+    "JournalEntry": {
+      "templates": []
+    }
+  },
+  "commonActorFields": {
+    "name": {
+      "type": "String",
+      "label": "Name",
+      "value": ""
+    },
+    "gender": {
+      "type": "String",
+      "label": "HOWTOBEAHERO.Gender",
+      "value": ""
+    },
+    "stature": {
+      "type": "String",
+      "label": "HOWTOBEAHERO.Stature",
+      "value": ""
+    },
+    "occupation": {
+      "type": "String",
+      "label": "HOWTOBEAHERO.Occupation",
+      "value": ""
+    },
+    "age": {
+      "type": "Number",
+      "label": "HOWTOBEAHERO.Age",
+      "value": 0
+    },
+    "religion": {
+      "type": "String",
+      "label": "HOWTOBEAHERO.Religion",
+      "value": ""
+    },
+    "maritalStatus": {
+      "type": "String",
+      "label": "HOWTOBEAHERO.MaritalStatus",
+      "value": ""
+    },
+    "portraitScore": {
+      "type": "Number",
+      "label": "HOWTOBEAHERO.PortraitScore",
+      "value": 0
+    },
+    "lifePoints": {
+      "value": {
+        "type": "Number",
+        "label": "HOWTOBEAHERO.LifePoints",
+        "min": 0,
+        "max": 100,
+        "value": 100
+      },
+      "max": {
+        "type": "Number",
+        "label": "HOWTOBEAHERO.LifePointsMax",
+        "value": 100
+      }
+    },
+    "inventory": {
+      "type": "String",
+      "label": "HOWTOBEAHERO.Inventory",
+      "editor": true,
+      "value": ""
+    },
+    "notes": {
+      "type": "String",
+      "label": "HOWTOBEAHERO.Notes",
+      "editor": true,
+      "value": ""
+    }
+  },
+  "heroFields": {
+    "skillPoints": {
+      "total": {
+        "type": "Number",
+        "label": "HOWTOBEAHERO.SkillPointsTotal",
+        "value": 400
+      },
+      "remaining": {
+        "type": "Number",
+        "label": "HOWTOBEAHERO.SkillPointsRemaining",
+        "value": 400
+      }
+    }
+  },
+  "commonItemFields": {
+    "description": {
+      "type": "String",
+      "label": "Description",
+      "editor": true
+    }
+  }
+}
