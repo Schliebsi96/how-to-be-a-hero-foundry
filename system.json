@@ -1,0 +1,64 @@
+{
+  "id": "how-to-be-a-hero",
+  "title": "How to Be a Hero",
+  "description": "A foundry system for the 'How to Be a Hero' tabletop role-playing game.",
+  "version": "0.0.1",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "11"
+  },
+  "esmodules": [
+    "how-to-be-a-hero.js"
+  ],
+  "styles": [
+    "css/how-to-be-a-hero.css"
+  ],
+  "packs": [
+    {
+      "name": "how-to-be-a-hero-skills",
+      "label": "How to Be a Hero Skills",
+      "path": "./packs/how-to-be-a-hero-skills",
+      "entity": "Item",
+      "type": "Item",
+      "system": "how-to-be-a-hero"
+    },
+    {
+      "name": "how-to-be-a-hero-equipment",
+      "label": "How to Be a Hero Equipment",
+      "path": "./packs/how-to-be-a-hero-equipment",
+      "entity": "Item",
+      "type": "Item",
+      "system": "how-to-be-a-hero"
+    },
+    {
+      "name": "how-to-be-a-hero-traits",
+      "label": "How to Be a Hero Traits",
+      "path": "./packs/how-to-be-a-hero-traits",
+      "entity": "Item",
+      "type": "Item",
+      "system": "how-to-be-a-hero"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    }
+  ],
+  "url": "https://github.com/Schliebsi96/how-to-be-a-hero-foundry",
+  "manifest": "https://raw.githubusercontent.com/Schliebsi96/how-to-be-a-hero-foundry/refs/heads/develop/system.json",
+  "download": "https://github.com/Schliebsi96/how-to-be-a-hero-foundry/archive/refs/heads/main.zip",
+  "license": "License.txt",
+  "readme": "",
+  "bugs": "",
+  "changelog": "",
+  "authors": [
+    {
+      "name": "Schliebsi96",
+      "url": "https://github.com/Schliebsi96"
+    }
+  ],
+  "flags": {},
+  "system": {}
+}
