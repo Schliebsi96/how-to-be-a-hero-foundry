@@ -1,6 +1,15 @@
+// This is the main JavaScript file for your 'How to Be a Hero' system.
+// All system-specific logic and initialization will go here.
 
+/**
+ * Define the HowToBeAHero Actor class.
+ * This class extends the base Foundry Actor and adds custom logic.
+ */
 class HowToBeAHeroActor extends Actor {
-   
+    /**
+     * Augment the actor data model with dynamic properties and calculated values.
+     * This method is called automatically by Foundry when actor data is prepared.
+     */
     prepareData() {
         super.prepareData();
 
@@ -115,7 +124,7 @@ class HowToBeAHeroActor extends Actor {
         // Create the chat message
         await ChatMessage.create({
             user: game.user.id,
-            speaker: ChatMessage.getSpeaker({ actor: this }),
+            speaker: ChatMessage.getSpeaker({ actor: this }), // Corrected: getSpeaker instead of get=o=Speaker
             content: chatContent,
             roll: roll,
             type: CONST.CHAT_MESSAGE_TYPES.ROLL
@@ -125,30 +134,47 @@ class HowToBeAHeroActor extends Actor {
     }
 }
 
+/**
+ * Define the HowToBeAHero Item class.
+ * This class extends the base Foundry Item and can add custom logic for items if needed.
+ */
 class HowToBeAHeroItem extends Item {
+    /**
+     * Augment the item data model with dynamic properties and calculated values.
+     * This method is called automatically by Foundry when item data is prepared.
+     */
     prepareData() {
         super.prepareData();
-      }
+        // Currently, no specific item-level calculations are needed beyond what's in Actor.prepareData()
+        // But this is where you would add them if an item needed its own derived properties.
+    }
 }
 
-// Import custom sheets
+// Import our custom sheets
 import { HowToBeAHeroActorSheet } from "./sheets/actor-sheet.js";
 import { HowToBeAHeroItemSheet } from "./sheets/item-sheet.js";
 
+/**
+ * Register the custom Actor and Item classes with Foundry VTT.
+ * This tells Foundry to use our custom classes instead of the default ones.
+ */
 Hooks.once("init", async function() {
     console.log("How to Be a Hero | Initializing system...");
 
+    // Assign our custom document classes
     CONFIG.Actor.documentClass = HowToBeAHeroActor;
     CONFIG.Item.documentClass = HowToBeAHeroItem;
 
+    // Register custom sheet applications
     Actors.unregisterSheet("core", ActorSheet);
     Actors.registerSheet("how-to-be-a-hero", HowToBeAHeroActorSheet, {
-        types: ["hero"],
+        types: ["hero"], // Only register for 'hero' type for now
         makeDefault: true
     });
+    // You can register other actor types later if they need different sheets
     Actors.registerSheet("how-to-be-a-hero", ActorSheet, {
         types: ["npc", "threat"],
-        makeDefault: false
+        makeDefault: false // Don't make default for these unless you create specific sheets
     });
 
 
@@ -159,7 +185,7 @@ Hooks.once("init", async function() {
     });
 
 
-    // Example: Register a basic system setting (can expand on this later)
+    // Example: Register a basic system setting (we can expand on this later)
     game.settings.register("how-to-be-a-hero", "exampleSetting", {
         name: "HOWTOBEAHERO.ExampleSetting", // Localized string
         hint: "HOWTOBEAHERO.ExampleSettingHint", // Localized string
@@ -169,65 +195,34 @@ Hooks.once("init", async function() {
         default: true
     });
 
+    /**
+     * Register Handlebars helpers.
+     * These helpers can be used in your HTML templates for dynamic content.
+     */
     Handlebars.registerHelper('enrichHTML', (content) => {
         return TextEditor.enrichHTML(content);
     });
 
+    // Helper to check if value is greater than zero
     Handlebars.registerHelper('isGreaterThanZero', (value) => {
         return value > 0;
     });
 });
 
+/**
+ * Perform any additional setup after the system has initialized and documents are ready.
+ * This hook is often used for registering keybindings, custom chat messages, or other
+ * elements that depend on the full Foundry environment being available.
+ */
 Hooks.once("ready", async function() {
     console.log("How to Be a Hero | System ready!");
 });
 
+// We can keep the createActor and updateActor hooks for debugging or future automation.
 Hooks.on("createActor", (actor, options, userId) => {
     if (userId === game.user.id && actor.type === "hero" && actor.items.size === 0) {
-        console.log(`New hero actor created: ${actor.name}. Adding default skills.`);
-        // Some default skills for a new Hero
-        actor.createEmbeddedDocuments("Item", [
-            {
-                name: "Schießen",
-                type: "skill",
-                system: {
-                    baseValue: 0,
-                    category: "Handeln"
-                }
-            },
-            {
-                name: "Ausweichen",
-                type: "skill",
-                system: {
-                    baseValue: 0,
-                    category: "Handeln"
-                }
-            },
-            {
-                name: "Geschichte",
-                type: "skill",
-                system: {
-                    baseValue: 0,
-                    category: "Wissen"
-                }
-            },
-            {
-                name: "Überzeugen",
-                type: "skill",
-                system: {
-                    baseValue: 0,
-                    category: "Soziales"
-                }
-            },
-            {
-                name: "Fantasie",
-                type: "skill",
-                system: {
-                    baseValue: 0,
-                    category: "Soziales"
-                }
-            }
-        ]);
+        console.log(`New hero actor created: ${actor.name}.`);
+        // Removed automatic creation of default skills.
     }
 });
 

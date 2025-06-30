@@ -47,9 +47,9 @@
     }
   ],
   "url": "https://github.com/Schliebsi96/how-to-be-a-hero-foundry",
-  "manifest": "",
-  "download": "",
-  "license": "",
+  "manifest": "https://raw.githubusercontent.com/Schliebsi96/how-to-be-a-hero-foundry/refs/heads/develop/system.json",
+  "download": "https://github.com/Schliebsi96/how-to-be-a-hero-foundry/archive/refs/heads/main.zip",
+  "license": "License.txt",
   "readme": "",
   "bugs": "",
   "changelog": "",
